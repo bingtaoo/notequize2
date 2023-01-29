@@ -16,17 +16,17 @@ import store from './store';
 Vue.config.productionTip = false;
 
 Vue.use(VueLazyload, {
-    loading: loadingIcon,
-    error: loadingError
+  loading: loadingIcon,
+  error: loadingError,
 });
 
 /* eslint-disable no-new */
 new Vue({
-    el: '#app',
-    router,
-    store,
-    components: {
-        App
-    },
-    template: '<App/>'
+  el: '#app',
+  router,
+  store,
+  components: {
+    App,
+  },
+  template: '<App/>',
 });
