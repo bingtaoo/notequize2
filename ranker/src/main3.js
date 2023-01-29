@@ -6,12 +6,12 @@ import 'vue-awesome/icons/angle-left';
 import 'vue-awesome/icons/angle-right';
 import 'vue-awesome/icons/question-circle';
 import VueLazyload from 'vue-lazyload';
-import App from './App';
-import loadingError from './assets/icon/loading-error.svg';
-import loadingIcon from './assets/icon/loading-icon.svg';
-import './mock/mock';
-import router from './router';
-import store from './store';
+import App from '/App';
+import loadingError from '/assets/icon/loading-error.svg';
+import loadingIcon from '/assets/icon/loading-icon.svg';
+import '/mock/mock';
+import router from '/router';
+import store from '/store';
 
 Vue.config.productionTip = false;
 
