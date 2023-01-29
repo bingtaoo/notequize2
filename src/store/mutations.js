@@ -1,4 +1,4 @@
-import { setLocal, getLocal } from '@/utils/cache';
+import { setLocal, getLocal } from '/utils/cache';
 import * as types from './mutation-types';
 
 const mutations = {
@@ -43,7 +43,7 @@ const mutations = {
   [types.SWITCH_MUSIC](state) {
     state.mute = !state.mute;
     setLocal('mute', state.mute);
-  }
+  },
 };
 
 export default mutations;

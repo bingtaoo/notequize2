@@ -1,4 +1,3 @@
-import 'normalize.css';
 import { createApp } from 'vue';
 
 import lazyPlugin from 'vue3-lazy';
