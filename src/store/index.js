@@ -1,4 +1,3 @@
-import actions from './actions';
 import mutations from './mutations';
 import state from './state';
 import createStore from 'vuex';
@@ -11,7 +10,6 @@ const store = createStore({
   strict: debug,
   mutations,
   state,
-  actions,
 });
 //导出store实例
 export default store;

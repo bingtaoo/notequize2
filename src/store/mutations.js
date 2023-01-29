@@ -1,11 +1,22 @@
 import { setLocal, getLocal } from '/utils/cache';
-import * as types from './mutation-types';
+
+export const GET_CACHE = 'GET_CACHE';
+
+export const SET_USER_INFO = 'SET_USER_INFO';
+
+export const PLAY_GAME = 'PLAY_GAME';
+
+export const END_GAME = 'END_GAME';
+
+export const INVITE = 'INVITE';
+
+export const SWITCH_MUSIC = 'SWITCH_MUSIC';
 
 const mutations = {
-  [types.GET_CACHE](state) {
+  [GET_CACHE](state) {
     state.mute = getLocal('mute') || false;
   },
-  [types.SET_USER_INFO](state, userInfo) {
+  [SET_USER_INFO](state, userInfo) {
     state.openid = userInfo.openid;
     state.nickname = userInfo.nickname;
     state.headImgUrl = userInfo.headImgUrl;
@@ -16,7 +27,7 @@ const mutations = {
     state.rank = userInfo.rank;
     state.invitationCode = userInfo.invitationCode;
   },
-  [types.PLAY_GAME](state, type) {
+  [PLAY_GAME](state, type) {
     switch (type) {
       case 'normal':
         state.gameNumber[0] -= 1;
@@ -32,15 +43,15 @@ const mutations = {
       default:
     }
   },
-  [types.END_GAME](state) {
+  [END_GAME](state) {
     state.previousGameMode = state.gameMode;
     state.gameMode = '';
   },
-  [types.INVITE](state) {
+  [INVITE](state) {
     state.gameNumber[0] += 1;
     state.gameNumber[1] += 1;
   },
-  [types.SWITCH_MUSIC](state) {
+  [SWITCH_MUSIC](state) {
     state.mute = !state.mute;
     setLocal('mute', state.mute);
   },

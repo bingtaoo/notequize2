@@ -1,12 +1,12 @@
-import InvitationCode from '/components/InvitationCode';
-import PrizePage from '/components/PrizePage';
+import InvitationCode from '../components/InvitationCode';
+import PrizePage from '../components/PrizePage';
 import RankingList from '/components/RankingList';
-import RulesPage from '/components/RulesPage';
-import SharePage from '/components/SharePage';
-import Countdown from '/pages/CountDown';
-import HomePage from '/pages/HomePage';
-import NotFound from '/pages/NotFound';
-import Quiz from '/pages/QuizPage';
+import RulesPage from '../components/RulesPage';
+import SharePage from '../components/SharePage';
+import Countdown from '../pages/CountDown';
+import HomePage from '../pages/HomePage';
+import NotFound from '../pages/NotFound';
+import Quiz from '../pages/QuizPage';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
